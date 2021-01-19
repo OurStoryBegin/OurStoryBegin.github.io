@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on alexwang</title>
-    <link>OurStoryBegin.github.io/tags/shell/</link>
+    <link>/tags/shell/</link>
     <description>Recent content in shell on alexwang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Jan 2021 20:02:08 +0800</lastBuildDate><atom:link href="OurStoryBegin.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 20:02:08 +0800</lastBuildDate><atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What&#39;s a tarball ?</title>
-      <link>OurStoryBegin.github.io/droppings/whats-a-tarball-file/</link>
+      <link>/droppings/whats-a-tarball-file/</link>
       <pubDate>Mon, 18 Jan 2021 20:02:08 +0800</pubDate>
       
-      <guid>OurStoryBegin.github.io/droppings/whats-a-tarball-file/</guid>
+      <guid>/droppings/whats-a-tarball-file/</guid>
       <description>A tarball, is a collection of files packed into a tar file for file storage. It&amp;rsquo;s often been compressed with gzip to save space. Thus the tar file has .tar or .tar.gz file extensions.
 How Can We Unpack It ? We can use tar command to unpack it in terminal?
 # list the file in *tarball* tar -tvf tarball # extract the tarball tar -xvf tarball # create a tarball from a folder tar -czvf tarball.</description>

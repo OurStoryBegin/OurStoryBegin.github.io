@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on alexwang</title>
-    <link>OurStoryBegin.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on alexwang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Jan 2021 20:58:26 +0800</lastBuildDate><atom:link href="OurStoryBegin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 20:58:26 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Apache Tomcat Server on Mac using Brew</title>
-      <link>OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/</link>
+      <link>/posts/install-apache-tomcat-server-on-mac-using-brew/</link>
       <pubDate>Mon, 18 Jan 2021 20:58:26 +0800</pubDate>
       
-      <guid>OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/</guid>
+      <guid>/posts/install-apache-tomcat-server-on-mac-using-brew/</guid>
       <description>Brew is a package manager tool for macOS, like apt for Ubuntu.
 Install Tomcat Server In this article, we just install apache tomcat 8.
 # Install tomcat version 8 brew install tomcat@8 This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well. By default, Homebrew will install the package into the /usr/local/Cellar directory. You can check it:
