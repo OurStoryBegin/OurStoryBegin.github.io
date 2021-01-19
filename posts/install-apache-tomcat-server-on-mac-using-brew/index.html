@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Alex Wang">
+    <meta name="description" content="Brew is a package manager tool for macOS, like apt for Ubuntu.
+Install Tomcat Server In this article, we just install apache tomcat 8.
+# Install tomcat version 8 brew install tomcat@8 This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well. By default, Homebrew will install the package into the /usr/local/Cellar directory. You can check it:
+# check the location brew ls tomcat@8 # You get like these: /usr/local/Cellar/tomcat@8/8.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Apache Tomcat Server on Mac using Brew"/>
+<meta name="twitter:description" content="Brew is a package manager tool for macOS, like apt for Ubuntu.
+Install Tomcat Server In this article, we just install apache tomcat 8.
+# Install tomcat version 8 brew install tomcat@8 This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well. By default, Homebrew will install the package into the /usr/local/Cellar directory. You can check it:
+# check the location brew ls tomcat@8 # You get like these: /usr/local/Cellar/tomcat@8/8."/>
+
+    <meta property="og:title" content="Install Apache Tomcat Server on Mac using Brew" />
+<meta property="og:description" content="Brew is a package manager tool for macOS, like apt for Ubuntu.
+Install Tomcat Server In this article, we just install apache tomcat 8.
+# Install tomcat version 8 brew install tomcat@8 This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well. By default, Homebrew will install the package into the /usr/local/Cellar directory. You can check it:
+# check the location brew ls tomcat@8 # You get like these: /usr/local/Cellar/tomcat@8/8." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/" />
+<meta property="article:published_time" content="2021-01-18T20:58:26+08:00" />
+<meta property="article:modified_time" content="2021-01-18T20:58:26+08:00" />
+
+
+    <title>
+  Install Apache Tomcat Server on Mac using Brew · alexwang
+</title>
+
+    
+      <link rel="canonical" href="OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+      integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css">
+    
+      
+      
+      <link rel="stylesheet" href="../../OurStoryBegin.github.io/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="../../OurStoryBegin.github.io/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="../../OurStoryBegin.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../OurStoryBegin.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="../../OurStoryBegin.github.io/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../OurStoryBegin.github.io/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.80.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="../../OurStoryBegin.github.io">
+      alexwang
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../OurStoryBegin.github.io/posts/">Writing</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../OurStoryBegin.github.io/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="../../OurStoryBegin.github.io/droppings/">Droppings</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Install Apache Tomcat Server on Mac using Brew</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-01-18T20:58:26&#43;08:00'>
+                January 18, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Brew is a package manager tool for macOS, like apt for Ubuntu.</p>
+<h2 id="install-tomcat-server">Install Tomcat Server</h2>
+<p>In this article, we just install apache tomcat 8.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#007f7f"># Install tomcat version 8</span>
+brew install tomcat@8
+</code></pre></div><p>This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well.
+By default, Homebrew will install the package into the <em>/usr/local/Cellar</em> directory.
+You can check it:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#007f7f"># check the location</span>
+brew ls tomcat@8
+<span style="color:#007f7f"># You get like these:</span>
+/usr/local/Cellar/tomcat@8/8.5.61/bin/catalina
+/usr/local/Cellar/tomcat@8/8.5.61/homebrew.mxcl.tomcat@8.plist
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/bin/ (<span style="color:#ff0;font-weight:bold">16</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/conf/ (<span style="color:#ff0;font-weight:bold">13</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/lib/ (<span style="color:#ff0;font-weight:bold">29</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/logs/ (<span style="color:#ff0;font-weight:bold">10</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/temp/safeToDelete.tmp
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/webapps/ (<span style="color:#ff0;font-weight:bold">554</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/work/ (<span style="color:#ff0;font-weight:bold">6</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/libexec/ (<span style="color:#ff0;font-weight:bold">2</span> files)
+/usr/local/Cellar/tomcat@8/8.5.61/RELEASE-NOTES
+/usr/local/Cellar/tomcat@8/8.5.61/RUNNING.txt
+</code></pre></div><h3 id="directory-structure">Directory Structure</h3>
+<p>List the content of <em>/usr/local/Cellar/tomcat@8/8.5.61/libexec/</em></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">.
+├── BUILDING.txt
+├── CONTRIBUTING.md
+├── bin
+├── conf
+├── lib
+├── logs
+├── temp
+├── webapps
+└── work
+</code></pre></div><ul>
+<li>bin: contains binary files and scripts</li>
+<li>conf: all configuration file can be find here</li>
+<li>lib: contains packages which tomcat needed</li>
+<li>logs: log file generated by tomcat in the process of running</li>
+<li>temp: temporary file generated by tomcat in the process of runnning</li>
+<li>webapps: contain all applications</li>
+<li>work: contain compiled file, such as JSP compiled file.</li>
+</ul>
+<p>The default <em>port</em> is <em>8080</em>, you can edit <em>/usr/local/Cellar/tomcat@8/8.5.61/libexec/conf/server.xml</em>, change the <em>port</em> attribute.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#007f7f">&lt;!-- inside server.xml --&gt;</span>
+<span style="font-weight:bold">&lt;Connector</span> <span style="color:#007f7f">port=</span><span style="color:#0ff;font-weight:bold">&#34;8080&#34;</span> <span style="color:#007f7f">protocol=</span><span style="color:#0ff;font-weight:bold">&#34;HTTP/1.1&#34;</span>
+               <span style="color:#007f7f">connectionTimeout=</span><span style="color:#0ff;font-weight:bold">&#34;20000&#34;</span>
+               <span style="color:#007f7f">redirectPort=</span><span style="color:#0ff;font-weight:bold">&#34;8443&#34;</span> <span style="font-weight:bold">/&gt;</span>
+</code></pre></div><h2 id="run-tomcat-server">Run Tomcat Server</h2>
+<p>You can use <em>brew services</em> to manage all the services in you system.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#007f7f"># start the tomcat server</span>
+brew services start tomcat@8
+<span style="color:#007f7f"># result</span>
+==&gt; Successfully started <span style="color:#0ff;font-weight:bold">`</span>tomcat@8<span style="color:#0ff;font-weight:bold">`</span> (label: homebrew.mxcl.tomcat@8)
+</code></pre></div><p>Once the server is runnning, you can visit the host page by <em>http://localhost:8080</em>.</p>
+<h2 id="manage-applications">Manage Applications</h2>
+<p>If you want to manage the applications runnig on the tomcat server, you should edit the configuration file:
+<em>/usr/local/Cellar/tomcat@8/8.5.61/libexec/conf/tomcat-users.xml</em>.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#007f7f">&lt;!-- inside tomcat-users.xml --&gt;</span>
+<span style="font-weight:bold">&lt;tomcat-users&gt;</span>
+...
+<span style="font-weight:bold">&lt;role</span> <span style="color:#007f7f">rolename=</span><span style="color:#0ff;font-weight:bold">&#34;manager-gui&#34;</span><span style="font-weight:bold">/&gt;</span>
+<span style="font-weight:bold">&lt;user</span> <span style="color:#007f7f">username=</span><span style="color:#0ff;font-weight:bold">&#34;admin&#34;</span> <span style="color:#007f7f">password=</span><span style="color:#0ff;font-weight:bold">&#34;se3ret&#34;</span> <span style="color:#007f7f">roles=</span><span style="color:#0ff;font-weight:bold">&#34;manager-gui&#34;</span><span style="font-weight:bold">/&gt;</span>
+<span style="font-weight:bold">&lt;/tomcat-users&gt;</span>
+</code></pre></div><p>You can set any <em>username</em> and <em>password</em> for your own.
+Now, restart the server.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew services restart tomcat@8
+</code></pre></div><p>You can get into the manager app page by click the <strong>Manager App</strong> on the host page after typing username and password.</p>
+<p>Now you can view the application running the server, deploy your own application. The deloyed application can be located under the directory
+<em>/usr/local/Cellar/tomcat@8/8.5.61/libexec/webapps/</em>.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+          2019 -
+        
+        2021
+         Alex Wang 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="../../OurStoryBegin.github.io/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

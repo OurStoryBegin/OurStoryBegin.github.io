@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alexwang</title>
+    <link>OurStoryBegin.github.io/</link>
+    <description>Recent content on alexwang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Jan 2021 20:58:26 +0800</lastBuildDate><atom:link href="OurStoryBegin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Apache Tomcat Server on Mac using Brew</title>
+      <link>OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/</link>
+      <pubDate>Mon, 18 Jan 2021 20:58:26 +0800</pubDate>
+      
+      <guid>OurStoryBegin.github.io/posts/install-apache-tomcat-server-on-mac-using-brew/</guid>
+      <description>Brew is a package manager tool for macOS, like apt for Ubuntu.
+Install Tomcat Server In this article, we just install apache tomcat 8.
+# Install tomcat version 8 brew install tomcat@8 This will take care of the downloading, installation, configuration of tomcat and manager the dependencies as well. By default, Homebrew will install the package into the /usr/local/Cellar directory. You can check it:
+# check the location brew ls tomcat@8 # You get like these: /usr/local/Cellar/tomcat@8/8.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s a tarball ?</title>
+      <link>OurStoryBegin.github.io/droppings/whats-a-tarball-file/</link>
+      <pubDate>Mon, 18 Jan 2021 20:02:08 +0800</pubDate>
+      
+      <guid>OurStoryBegin.github.io/droppings/whats-a-tarball-file/</guid>
+      <description>A tarball, is a collection of files packed into a tar file for file storage. It&amp;rsquo;s often been compressed with gzip to save space. Thus the tar file has .tar or .tar.gz file extensions.
+How Can We Unpack It ? We can use tar command to unpack it in terminal?
+# list the file in *tarball* tar -tvf tarball # extract the tarball tar -xvf tarball # create a tarball from a folder tar -czvf tarball.</description>
+    </item>
+    
+  </channel>
+</rss>
